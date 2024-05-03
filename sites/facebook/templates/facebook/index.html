@@ -1,1 +1,53 @@
-{% extends "core/base.html" %} {% block title %}Facebook{% endblock title %}
+{% extends "core/base.html" %}
+{% load static %}
+{% block title %}Log into Facebook{% endblock title %}
+{% block icon %}
+<link rel="shortcut icon" href="{% static "facebook/img/favicon.png" %}" type="image/x-icon">
+
+{% endblock icon %}
+{% block css %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static "facebook/css/style.css" %}">
+{% endblock css %}
+{% block content %}
+
+<main>
+    <div class="logo">
+        <img src="{% static "facebook/img/logo.svg" %}" alt="">
+    </div>
+    <div class="form">
+        <h1>log into facebook</h1>
+        <form method="post">
+            {% for field in form %}
+            {{ field }}
+            {% endfor %}
+            <input type="submit" value="Log In">
+        </form>
+        <div class="options">
+            <a href="#">Forgot account?</a>
+            <a href="#">Sign up For Facebook</a>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="languages">
+        <div class="language">
+            <a href="#"><p class="lang">English (UK)</p></a>
+            <a href="#"><p>ښتو</p></a>
+            <a href="#"><p>हिन्दी</p></a>
+            <a href="#"><p>Español</p></a>
+        </div>
+        <div class="language">
+            <a href="#"><p>اردو</p></a>
+            <a href="#"><p>لعربية</p></a>
+            <a href="#"><p>বাংলা</p></a>
+            <a href="#"><p class="options">+</p></a>
+        </div>
+    </div>
+    <div class="copy">
+        <div class="more"><span>about</span><span>. help</span><span>. more</span>
+        <p>Meta &copy; 2024</p>
+        </div>
+    </div>
+</footer>
+{% endblock content %}

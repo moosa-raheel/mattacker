@@ -1,0 +1,117 @@
+@font-face {
+    font-family: sf;
+    src: url("/static/facebook/fonts/regular.OTF");
+}
+@font-face {
+    font-family: sf-bold;
+    src: url("/static/facebook/fonts/bold.OTF");
+}
+main{
+    background: #F0F2F5;
+    padding-bottom: 20vh;
+}
+.logo img{
+width: 20vw;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    padding: 5vh 0 3vh 0;
+}
+.form{
+    width: 40%;
+    margin: 0 auto ;
+    background: #fff;
+    box-shadow:  rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(0, 0, 0, 0.1) 0px 8px 16px 0px;
+    border: 1px solid  rgb(221, 223, 226);
+    border-radius: 8px;
+}
+.form h1{
+    text-align: center;
+    font-size: 20px;
+    color: #282828;
+    font-family: sf;
+    font-weight: 300;
+    text-transform: capitalize;
+    margin: 20px 0;
+}
+.form form{
+    width: 90%;
+    margin: 0 auto;
+}
+.form form input[type="submit"]{
+    padding: 10px;
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    color: #fff;
+    background: #1877F2;
+    font-family: sf-bold;
+    border: none;
+    border-radius: 6px;
+}
+.form .options a{
+    color:  rgb(24, 119, 242);
+    text-decoration: none;
+    font-family: sf;
+    font-weight: 300;
+}
+.form .options{
+    width: 60%;
+    margin: 20px auto 30px auto;
+    display: flex;
+    justify-content: space-between;
+}
+form input{
+    display: block;
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid rgb(221, 223, 226);
+    border-radius: 6px;
+    font-size: 17px;
+    color: #1d2129;
+    background: #fff;
+}
+form input:focus{
+    background: #fffff2;
+    border: 1px solid rgb(221, 223, 226);
+    outline: none;
+}
+form input::placeholder{
+    color: rgb(144, 143, 143);
+}
+form input{
+    margin: 15px 0;
+}
+.language a{
+    text-decoration: none;
+    font-family: sf-bold;
+    color:  rgb(144, 148, 156);
+    text-align: center;
+}
+.languages{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20vh;
+    font-size: 14px;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+}
+footer .copy{
+    align-self: center;
+    font-family: sf;
+    color:  rgb(144, 148, 156);
+    text-align: center;
+   margin-bottom: 20vh;
+}
+footer .copy span{
+   font-size: 10px;
+   text-transform: capitalize;
+   margin: 0 10px;
+}
+footer .copy p{
+    margin: 10px 0;
+    font-size: 14px;
+}
